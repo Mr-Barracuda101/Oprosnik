@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Пусть будет опросник</title>
+</head>
+<body>
+
+	
+
+
+	<script>
+		const word0 = "Введите перевод слова:Sun";
+		const word1 = "Введите перевод слова:Red";
+		const word2 = "Введите перевод слова:Milk";
+
+		const word0Tr = "Солнце";
+		const word1Tr = "Красный";
+		const word2Tr = "Молоко";
+
+		let wordsCount = 3;
+
+		const finish = "Красава, победил"
+		const onFinish = "Ну такое"
+
+		let correctAnswerCount = 0;
+
+		const minCorrectAnswerPercent = 34;
+
+		const userAnswer0 = prompt (word0);
+		alert (userAnswer0 === word0Tr);
+		if (userAnswer0 === word0Tr) {
+			correctAnswerCount = correctAnswerCount + 1;
+		}
+
+		const userAnswer1 = prompt (word1);
+		alert (userAnswer1 === word1Tr);
+		if (userAnswer1 === word1Tr) {
+			correctAnswerCount = correctAnswerCount + 1;
+		}
+
+		const userAnswer2 = prompt (word2);
+		alert (userAnswer2 === word2Tr);
+		if (userAnswer2 === word2Tr) {
+			correctAnswerCount = correctAnswerCount + 1;
+		}
+
+		let correctAnswerPercent = correctAnswerCount / wordsCount * 100;
+
+		if (correctAnswerPercent > minCorrectAnswerPercent) {
+			alert(finish);
+		} else {
+			alert(onFinish);
+		}
+
+	</script>
+</body>
+</html>
